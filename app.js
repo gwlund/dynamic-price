@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
  
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12";
+var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_yelpcamp";
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -49,7 +49,9 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
+var port = process.env.PORT || 3000;
+var ip = process.env.IP || "localhost";
 
-app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+app.listen(port, ip, function(){
+   console.log("The Heliotrope YelpCamp Server Has Started " + ip + ":" + port);
 });
