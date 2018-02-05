@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     experienceRoutes = require("./routes/experiences"),
     indexRoutes      = require("./routes/index")
  
-var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience_v1";
+var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience_v2";
 console.log("Using mongo db " + url);
 mongoose.connect(url);
 
