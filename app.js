@@ -13,7 +13,7 @@ var express     = require("express"),
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
+    campgroundRoutes = require("./routes/experiences"),
     indexRoutes      = require("./routes/index")
  
 var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience";
@@ -47,8 +47,8 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/experiences", campgroundRoutes);
+app.use("/experiences/:id/comments", commentRoutes);
 
 var port = process.env.PORT || 3000;
 var ip = process.env.IP || "localhost";
