@@ -17,19 +17,21 @@
                     </p>
                     <hr>
                     <p class="card-text"><%= campground.description %></p>
-                    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
-                        <a class="btn btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
-                        <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST" class="delete-form">
-                            <button class="btn btn-danger">Delete</button>
-                        </form>
-                    <% } %>
+                    <div class="float-right">
+                        <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                            <a class="btn btn-sm btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+                            <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST" class="delete-form">
+                                <input type="submit" value = "Delete" class="btn btn-sm btn-danger">
+                            </form>
+                        <% } %>
+                    </div>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-body">
                     <div class="text-right">
-                        <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
+                        <a class="btn btn-md btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
                     </div>
                     <hr>
                     <div class="row">
