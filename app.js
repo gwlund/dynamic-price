@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
  
-var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_yelpcamp";
+var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience";
 console.log("Using mongo db " + url);
 mongoose.connect(url);
 
