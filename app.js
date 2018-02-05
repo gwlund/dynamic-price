@@ -6,17 +6,17 @@ var express     = require("express"),
     passport    = require("passport"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
-    Campground  = require("./models/campground"),
+    Experience  = require("./models/experience"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
     seedDB      = require("./seeds")
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
-    campgroundRoutes = require("./routes/experiences"),
+    experienceRoutes = require("./routes/experiences"),
     indexRoutes      = require("./routes/index")
  
-var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience";
+var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience_v1";
 console.log("Using mongo db " + url);
 mongoose.connect(url);
 
@@ -29,7 +29,7 @@ app.use(flash());
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
-    secret: "Once again Rusty wins cutest dog!",
+    secret: "heliotrope bellingham",
     resave: false,
     saveUninitialized: false
 }));
@@ -47,12 +47,12 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/experiences", campgroundRoutes);
+app.use("/experiences", experienceRoutes);
 app.use("/experiences/:id/comments", commentRoutes);
 
 var port = process.env.PORT || 3000;
 var ip = process.env.IP || "localhost";
 
-app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The Heliotrope YelpCamp Server Has Started " + ip + ":" + port);
+app.listen(port, ip, function(){
+   console.log("The Heliotrope Experience Server Has Started " + ip + ":" + port);
 });

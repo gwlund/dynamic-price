@@ -1,24 +1,24 @@
 var express = require("express");
 var router  = express.Router();
-var Campground = require("../models/campground");
+var Experience = require("../models/experience");
 var middleware = require("../middleware");
 
 
-//INDEX - show all campgrounds
+//INDEX - show all Experiences
 router.get("/", function(req, res){
-    // Get all campgrounds from DB
-    Campground.find({}, function(err, allCampgrounds){
+    // Get all Experiences from DB
+    Experience.find({}, function(err, allExperiences){
        if(err){
            console.log(err);
        } else {
-          res.render("experiences/index",{campgrounds:allCampgrounds});
+          res.render("experiences/index",{experiences:allExperiences});
        }
     });
 });
 
-//CREATE - add new campground to DB
+//CREATE - add new Experience to DB
 router.post("/", middleware.isLoggedIn, function(req, res){
-    // get data from form and add to campgrounds array
+    // get data from form and add to Experiences array
     var name = req.body.name;
     var price = req.body.price;
     var image = req.body.image;
@@ -27,49 +27,49 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         id: req.user._id,
         username: req.user.username
     }
-    var newCampground = {name: name, price: price, image: image, description: desc, author:author}
-    // Create a new campground and save to DB
-    Campground.create(newCampground, function(err, newlyCreated){
+    var newExperience = {name: name, price: price, image: image, description: desc, author:author}
+    // Create a new Experience and save to DB
+    Experience.create(newExperience, function(err, newlyCreated){
         if(err){
             console.log(err);
         } else {
-            //redirect back to campgrounds page
+            //redirect back to Experiences page
             console.log(newlyCreated);
             res.redirect("/experiences");
         }
     });
 });
 
-//NEW - show form to create new campground
+//NEW - show form to create new Experience
 router.get("/new", middleware.isLoggedIn, function(req, res){
    res.render("experiences/new"); 
 });
 
-// SHOW - shows more info about one campground
+// SHOW - shows more info about one Experience
 router.get("/:id", function(req, res){
-    //find the campground with provided ID
-    Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
+    //find the Experience with provided ID
+    Experience.findById(req.params.id).populate("comments").exec(function(err, foundExperience){
         if(err){
             console.log(err);
         } else {
-            console.log(foundCampground)
-            //render show template with that campground
-            res.render("experiences/show", {campground: foundCampground});
+            console.log(foundExperience)
+            //render show template with that Experience
+            res.render("experiences/show", {experience: foundExperience});
         }
     });
 });
 
-// EDIT CAMPGROUND ROUTE
-router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res){
-    Campground.findById(req.params.id, function(err, foundCampground){
-        res.render("experiences/edit", {campground: foundCampground});
+// EDIT Experience ROUTE
+router.get("/:id/edit", middleware.checkExperienceOwnership, function(req, res){
+    Experience.findById(req.params.id, function(err, foundExperience){
+        res.render("experiences/edit", {experience: foundExperience});
     });
 });
 
-// UPDATE CAMPGROUND ROUTE
-router.put("/:id",middleware.checkCampgroundOwnership, function(req, res){
-    // find and update the correct campground
-    Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
+// UPDATE Experience ROUTE
+router.put("/:id",middleware.checkExperienceOwnership, function(req, res){
+    // find and update the correct Experience
+    Experience.findByIdAndUpdate(req.params.id, req.body.experience, function(err, updatedExperience){
        if(err){
            res.redirect("/experiences");
        } else {
@@ -79,9 +79,9 @@ router.put("/:id",middleware.checkCampgroundOwnership, function(req, res){
     });
 });
 
-// DESTROY CAMPGROUND ROUTE
-router.delete("/:id",middleware.checkCampgroundOwnership, function(req, res){
-   Campground.findByIdAndRemove(req.params.id, function(err){
+// DESTROY Experience ROUTE
+router.delete("/:id",middleware.checkExperienceOwnership, function(req, res){
+   Experience.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/experiences");
       } else {
