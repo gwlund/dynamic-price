@@ -11,7 +11,7 @@ router.get("/", function(req, res){
        if(err){
            console.log(err);
        } else {
-          res.render("campgrounds/index",{campgrounds:allCampgrounds});
+          res.render("experiences/index",{campgrounds:allCampgrounds});
        }
     });
 });
@@ -35,14 +35,14 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         } else {
             //redirect back to campgrounds page
             console.log(newlyCreated);
-            res.redirect("/campgrounds");
+            res.redirect("/experiences");
         }
     });
 });
 
 //NEW - show form to create new campground
 router.get("/new", middleware.isLoggedIn, function(req, res){
-   res.render("campgrounds/new"); 
+   res.render("experiences/new"); 
 });
 
 // SHOW - shows more info about one campground
@@ -54,7 +54,7 @@ router.get("/:id", function(req, res){
         } else {
             console.log(foundCampground)
             //render show template with that campground
-            res.render("campgrounds/show", {campground: foundCampground});
+            res.render("experiences/show", {campground: foundCampground});
         }
     });
 });
@@ -62,7 +62,7 @@ router.get("/:id", function(req, res){
 // EDIT CAMPGROUND ROUTE
 router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res){
     Campground.findById(req.params.id, function(err, foundCampground){
-        res.render("campgrounds/edit", {campground: foundCampground});
+        res.render("experiences/edit", {campground: foundCampground});
     });
 });
 
@@ -71,10 +71,10 @@ router.put("/:id",middleware.checkCampgroundOwnership, function(req, res){
     // find and update the correct campground
     Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
        if(err){
-           res.redirect("/campgrounds");
+           res.redirect("/experiences");
        } else {
            //redirect somewhere(show page)
-           res.redirect("/campgrounds/" + req.params.id);
+           res.redirect("/experiences/" + req.params.id);
        }
     });
 });
@@ -83,9 +83,9 @@ router.put("/:id",middleware.checkCampgroundOwnership, function(req, res){
 router.delete("/:id",middleware.checkCampgroundOwnership, function(req, res){
    Campground.findByIdAndRemove(req.params.id, function(err){
       if(err){
-          res.redirect("/campgrounds");
+          res.redirect("/experiences");
       } else {
-          res.redirect("/campgrounds");
+          res.redirect("/experiences");
       }
    });
 });
