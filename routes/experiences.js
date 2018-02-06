@@ -16,6 +16,50 @@ router.get("/", function(req, res){
     });
 });
 
+router.get("/dining", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'dining'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/nightlife", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'nightlife'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/outdoors", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'outdoors'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/cultural", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'cultural'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
 //CREATE - add new Experience to DB
 router.post("/", middleware.isLoggedIn, function(req, res){
     // get data from form and add to Experiences array
