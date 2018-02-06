@@ -14,7 +14,7 @@ var experienceData = [
             state: "WA",
             zip: "98229",
             phone: "360-746-6130",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/J6dPFXu2VZ72"
         },
         external_links: {
             url1: "http://test.com",
@@ -35,7 +35,7 @@ var experienceData = [
             state: "WA",
             zip: "98229",
             phone: "360-671-3414",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/arzfCPbjtcL2"
         },
         external_links: {
             url1: "http://test.com",
@@ -56,7 +56,7 @@ var experienceData = [
             state: "WA",
             zip: "98229",
             phone: "360-715-8324",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/CLyEGEh7yoS2"
         },
         external_links: {
             url1: "http://test.com",
@@ -77,7 +77,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-738-2090",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/5Zv7Q7SrfHN2"
         },
         external_links: {
             url1: "http://test.com",
@@ -98,7 +98,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-647-5593",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/X8YEEsr6PDR2"
         },
         external_links: {
             url1: "http://test.com",
@@ -119,7 +119,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-647-7547",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/yKr3Nuzm5tS2"
         },
         external_links: {
             url1: "http://test.com",
@@ -140,7 +140,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-714-0188",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/YupGBBvdXN32"
         },
         external_links: {
             url1: "http://test.com",
@@ -161,7 +161,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-746-8733",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/1njbvwYZoMP2"
         },
         external_links: {
             url1: "http://test.com",
@@ -182,7 +182,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-778-1067",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/fw42gtfJRVm"
         },
         external_links: {
             url1: "http://test.com",
@@ -203,7 +203,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-734-6080",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/S4ngwbcjbqq"
         },
         external_links: {
             url1: "http://test.com",
@@ -224,7 +224,7 @@ var experienceData = [
             state: "WA",
             zip: "98225",
             phone: "360-305-3524",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/G8fqL9nG8Yr"
         },
         external_links: {
             url1: "http://test.com",
@@ -245,7 +245,7 @@ var experienceData = [
             state: "WA",
             zip: "98244",
             phone: "360-734-6771",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/jwkLu1RAHzC2"
         },
         external_links: {
             url1: "http://test.com",
@@ -265,7 +265,7 @@ var experienceData = [
             city: "Bellingham",
             state: "WA",
             zip: "98225",
-            map_url: "http://maps.google.com"
+            map_url: "https://goo.gl/maps/SPMLXRBgpaQ2"
         },
         external_links: {
             url1: "http://test.com",
