@@ -148,7 +148,7 @@ var experienceData = [
     },
     {
         name: "The Wild Buffalo", 
-        description: "Concerts and stiff drinks.",
+        description: "Concerts and stiff drinks.  Funky, brick-walled club with bar & dance floor offers live blues, rock, reggae shows & more.",
         type: "nightlife", 
         rank: 1,
         region: "downtown",
@@ -169,7 +169,7 @@ var experienceData = [
     },
     {
         name: "The Shakedown", 
-        description: "Concerts and stiff drinks.",
+        description: "Looking for an upbeat show from a local band?  The Shakedown has got you covered.  Concerts and stiff drinks.",
         type: "nightlife", 
         rank: 1,
         region: "downtown",
@@ -232,7 +232,7 @@ var experienceData = [
     },
     {
         name: "Mt. Baker Ski Area", 
-        description: "Pow, chutes, and steeps",
+        description: "Known for deep pow, exhilerating chutes, and extrem steeps, Mt Baker attracts world class skiers for near and far.",
         type: "outdoors", 
         rank: 1,
         region: "whatcom",
@@ -253,7 +253,7 @@ var experienceData = [
     },
     {
         name: "Galbraith Mountain", 
-        description: "Mountain biking mecca",
+        description: "Galbraith mountain is a world class mountain destination located within riding distance of downtown Bellingham. Over 50 miles of singletrack that winds through over 3000 acres overlooking the city and Bellingham Bay. The mountain is accessible to all non motorized use but all of the trails are built and maintained by the WMBC.",
         type: "outdoors", 
         rank: 1,
         region: "padden",
