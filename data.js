@@ -82,6 +82,69 @@ var experienceData = [
         external_links: {
             url1: "http://test.com",
         }
+    },
+    {
+        name: "Boundary Bay Brewery & Bistro", 
+        description: "Expansive, unfussy brewpub with a deck & beer garden serving locally sourced pub grub & award winning craft beer. Great for the whole family. Bellingham’s first brewery!",
+        type: "dining", 
+        rank: 3,
+        region: "downtown",
+        tags: ["food", "lunch", "dinner", "beer"],
+        website: "https://www.bbaybrewery.com/",
+        image: "https://www.bellingham.org/wp-content/uploads/2016/03/irish-dancers.jpg",
+        address: {
+            address1: "1107 Railroad Ave",
+            city: "Bellingham",
+            state: "WA",
+            zip: "98229",
+            phone: "360-647-5593",
+            map_url: "http://maps.google.com"
+        },
+        external_links: {
+            url1: "http://test.com",
+        }
+    },
+    {
+        name: "Rudy’s Pizzeria ", 
+        description: "Counter-serve spot dishing creative slices/pies with vegan & gluten-free options plus beer & wine.",
+        type: "dining", 
+        rank: 5,
+        region: "downtown",
+        tags: ["food", "dinner", "pizza"],
+        website: "http://www.rudysbham.com/",
+        image: "http://4.bp.blogspot.com/-t3CwZbZIiLs/Tih2uLyFxLI/AAAAAAAAB9I/f59VrO6NxJM/s1600/Photo976.jpg",
+        address: {
+            address1: "1232 N. State Street",
+            city: "Bellingham",
+            state: "WA",
+            zip: "98229",
+            phone: "360-647-7547",
+            map_url: "http://maps.google.com"
+        },
+        external_links: {
+            url1: "http://test.com",
+        }
+    },
+    {
+        name: "D’Anna’s Cafe Italiano", 
+        description: "Brick-walled cafe known for fresh pasta dishes, Sicilian fare, & a bevy of local & imported wines.",
+        type: "dining", 
+        rank: 2,
+        region: "fairhaven",
+        tags: ["food", "dinner", "italian"],
+        website: "http://dannascafeitaliano.com/",
+        image: "http://dannascafeitaliano.com/images/12.jpg",
+        address: {
+            address1: "1317 N. State Street",
+            city: "Bellingham",
+            state: "WA",
+            zip: "98229",
+            phone: "360-714-0188",
+            map_url: "http://maps.google.com"
+        },
+        external_links: {
+            url1: "http://test.com",
+        }
     }
 
 ];
