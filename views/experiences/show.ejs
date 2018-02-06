@@ -8,11 +8,6 @@
             <div class="card mb-4">
                 <img class="card-img-top" src="<%= experience.image %>" alt="<%= experience.name %>">
                 <div class="card-body">
-                    <p class="float-right">
-                        <% experience.tags.forEach(function(tag){ %>
-                            <em><%= tag %> ,</em>
-                        <% }) %>
-                    </p>
                     <h5 class="card-title"><%= experience.name %></h5>
                     <!-- <p>
                         <em>Submitted by: <%= experience.author.username %></em>
@@ -32,6 +27,12 @@
                             </form>
                         <% } %>
                     </div>
+                    <hr>
+                    <p class="float-left">
+                        <% experience.tags.forEach(function(tag){ %>
+                            <em><%= tag %> ,</em>
+                        <% }) %>
+                    </p>
                 </div>
             </div>
 
