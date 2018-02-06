@@ -9,14 +9,14 @@ var express     = require("express"),
     Experience  = require("./models/experience"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
-    seedDB      = require("./seeds")
+    seedDB      = require("./seeds");
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
     experienceRoutes = require("./routes/experiences"),
-    indexRoutes      = require("./routes/index")
+    indexRoutes      = require("./routes/index");
  
-var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience_v2";
+var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience_v3";
 console.log("Using mongo db " + url);
 mongoose.connect(url);
 
@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-// seedDB(); //seed the database
+seedDB(); //seed the database
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({

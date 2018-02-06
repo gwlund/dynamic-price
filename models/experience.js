@@ -14,6 +14,7 @@ var experienceSchema = new mongoose.Schema({
        address2: String,
        city: String,
        state: String,
+       zip: String,
        phone: String,
        map_url: String
    },

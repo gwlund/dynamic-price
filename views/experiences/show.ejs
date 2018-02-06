@@ -9,11 +9,18 @@
                 <img class="card-img-top" src="<%= experience.image %>" alt="<%= experience.name %>">
                 <div class="card-body">
                     <p class="float-right">
-                        $<%= experience.rank %>/night
+                        <% experience.tags.forEach(function(tag){ %>
+                            <em><%= tag %> ,</em>
+                        <% }) %>
                     </p>
                     <h5 class="card-title"><%= experience.name %></h5>
-                    <p>
+                    <!-- <p>
                         <em>Submitted by: <%= experience.author.username %></em>
+                    </p> -->
+                    <p>
+                        <%= experience.address.address1 %>
+                        <br><%= experience.address.phone%>
+                        <br><a href="<%= experience.website %>">website</a>
                     </p>
                     <hr>
                     <p class="card-text"><%= experience.description %></p>
