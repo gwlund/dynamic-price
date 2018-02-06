@@ -1,18 +1,18 @@
-var Campground = require("../models/campground");
+var Experience = require("../models/experience");
 var Comment = require("../models/comment");
 
 // all the middleare goes here
 var middlewareObj = {};
 
-middlewareObj.checkCampgroundOwnership = function(req, res, next) {
+middlewareObj.checkExperienceOwnership = function(req, res, next) {
  if(req.isAuthenticated()){
-        Campground.findById(req.params.id, function(err, foundCampground){
+        Experience.findById(req.params.id, function(err, foundExperience){
            if(err){
-               req.flash("error", "Campground not found");
+               req.flash("error", "Experience not found");
                res.redirect("back");
            }  else {
-               // does user own the campground?
-            if(foundCampground.author.id.equals(req.user._id)) {
+               // does user own the Experience?
+            if(foundExperience.author.id.equals(req.user._id)) {
                 next();
             } else {
                 req.flash("error", "You don't have permission to do that");

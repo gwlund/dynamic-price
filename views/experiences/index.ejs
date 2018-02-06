@@ -1,0 +1,30 @@
+<% include ../partials/header %> 
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+             <h2>Welcome To the Heliotrope Experience Portal</h2>
+             <p>View our hand-picked experiences from all over the Pacific Northwest</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/experiences/new">Add New Experience</a>
+             </p>
+        </div>
+    </header>
+
+    <div class="row text-center" id="experience-grid">
+         <% experiences.forEach(function(experience) { %>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="<%= experience.image %>" alt="<%= experience.name %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= experience.name %></h5>
+                        <a href="/experiences/<%= experience._id %>" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+     
+</div>
+
+<% include ../partials/footer %>
