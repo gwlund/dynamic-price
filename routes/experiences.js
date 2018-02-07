@@ -27,6 +27,61 @@ router.get("/dining", function(req, res){
     });
 });
 
+router.get("/lunch", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({tags: 'lunch'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/dinner", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({tags: 'dinner'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/beer", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({tags: 'beer'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/italian", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({tags: 'italian'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
+router.get("/comfort", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({tags: 'comfort'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          res.render("experiences/index",{experiences:allExperiences});
+       }
+    });
+});
+
 router.get("/nightlife", function(req, res){
     // Get all dining Experiences from DB
     Experience.find({type: 'nightlife'}, function(err, allExperiences){
