@@ -44,3 +44,9 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.btn-heliotrope {
+    color: #fff;
+    background-color: #c45027;
+    border-color: #c45027;
+}
