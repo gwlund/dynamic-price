@@ -16,7 +16,9 @@
                     <input class="form-control" type="text" name="experience[image]" value="<%= experience.image %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="experience[description]" value="<%= experience.description %>">
+                    <label for="name">Description</label>
+                    <!-- <input class="form-control" type="text" name="experience[description]" value="<%= experience.description %>"> -->
+                    <textarea class="input" name="experience[description]" value="<%= experience.description %>" cols="60" rows="5"><%= experience.description %>"</textarea>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-lg btn-heliotrope btn-block">Submit!</button>
