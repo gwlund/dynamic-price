@@ -13,7 +13,9 @@ router.get("/", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/dining", function(req, res){
@@ -24,7 +26,9 @@ router.get("/dining", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/lunch", function(req, res){
@@ -35,7 +39,9 @@ router.get("/lunch", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/dinner", function(req, res){
@@ -46,7 +52,9 @@ router.get("/dinner", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/beer", function(req, res){
@@ -57,7 +65,9 @@ router.get("/beer", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/italian", function(req, res){
@@ -68,7 +78,9 @@ router.get("/italian", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/comfort", function(req, res){
@@ -79,7 +91,9 @@ router.get("/comfort", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/nightlife", function(req, res){
@@ -90,7 +104,9 @@ router.get("/nightlife", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/outdoors", function(req, res){
@@ -101,7 +117,9 @@ router.get("/outdoors", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 router.get("/cultural", function(req, res){
@@ -112,7 +130,9 @@ router.get("/cultural", function(req, res){
        } else {
           res.render("experiences/index",{experiences:allExperiences});
        }
-    });
+    }).sort({
+        type: 1,
+        rank: 1});
 });
 
 //CREATE - add new Experience to DB
