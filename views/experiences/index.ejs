@@ -5,9 +5,11 @@
         <div class="container">
              <h2>Welcome to the Heliotrope Experience Portal</h2>
              <p>View our hand-picked experiences from all over the Pacific Northwest</p>
+             <% if(currentUser){ %>
              <p>
                 <a class="btn btn-heliotrope btn-heliotrope btn-large" href="/experiences/new">Add New Experience</a>
              </p>
+             <% } %>
                 <div class="row">
                     <div class="col-sm-6 mb-4">
                         <a class="btn btn-dark btn-sm" href="/experiences/lunch">lunch</a>
