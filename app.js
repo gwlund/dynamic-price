@@ -16,7 +16,7 @@ var commentRoutes    = require("./routes/comments"),
     experienceRoutes = require("./routes/experiences"),
     indexRoutes      = require("./routes/index");
  
-var url = process.env.DATABASEURL || "mongodb://localhost/heliotrope_experience_v3";
+var url = process.env.DATABASEURL || "mongodb://localhost/nucleus_experience_v3";
 console.log("Using mongo db " + url);
 mongoose.connect(url);
 
@@ -29,7 +29,7 @@ seedDB(); //seed the database
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
-    secret: "heliotrope bellingham",
+    secret: "nucleusnw bellingham",
     resave: false,
     saveUninitialized: false
 }));
@@ -53,6 +53,6 @@ app.use("/experiences/:id/comments", commentRoutes);
 var port = process.env.PORT || 3000;
 var ip = process.env.IP || "localhost";
 
-app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The Heliotrope Experience Server Has Started " + ip + ":" + port);
+app.listen(port, ip, function(){
+   console.log("The NucleusNW Experience Server Has Started " + ip + ":" + port);
 });
