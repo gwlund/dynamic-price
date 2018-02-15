@@ -44,7 +44,7 @@
 
             <ul class="navbar-nav">
                 <% if(!currentUser) { %>
-                    <li class="nav-item <%= typeof pasge !== 'undefined' && page === 'login' ? 'active' : '' %>">
+                    <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>">
                         <a href="/login" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item <%= typeof pasge !== 'undefined' && page === 'register' ? 'active' : '' %>">
