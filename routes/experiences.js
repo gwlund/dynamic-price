@@ -27,6 +27,7 @@ router.get("/dining", function(req, res){
        } else {
           //Get a list of all tags for the experiences
           var tags = getTagsFromExperiences(allExperiences);
+          console.log("Tags: " + tags);
           res.render("experiences/index",{experiences:allExperiences, tags:tags});
        }
     }).sort({
@@ -51,7 +52,18 @@ router.get("/:tag/filter", function(req, res){
 getTagsFromExperiences = function(experiences){
     console.log("Gettings tags from experiences");
 
-    var tags = ["beer", "lunch", "comfort"];
+    var tags = [];
+    experiences.forEach(function(experience) { 
+        //console.log("Experience: " + experience.name); 
+        //console.log("Experience tags: " + experience.tags); 
+        experience.tags.forEach(function(tag) {
+            if (tags.indexOf(tag) == -1){
+                tags.push(tag);
+            }
+        });
+    });
+
+    //var tags = ["beer", "lunch", "comfort"];
     return tags;
 };
 
