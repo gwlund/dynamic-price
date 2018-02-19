@@ -12,11 +12,11 @@
              <% } %>
                 <div class="row">
                     <div class="col-sm-6 mb-4">
-                        <a class="btn btn-dark btn-sm" href="/experiences/lunch">lunch</a>
-                        <a class="btn btn-dark btn-sm" href="/experiences/dinner">dinner</a>
-                        <a class="btn btn-dark btn-sm" href="/experiences/beer">beer</a>
-                        <a class="btn btn-dark btn-sm" href="/experiences/italian">italian</a>
-                        <a class="btn btn-dark btn-sm" href="/experiences/comfort">comfort</a>
+                        <% if (tags) { %>
+                            <%  tags.forEach(function(tag) { %>
+                                <a class="btn btn-dark btn-sm" href="/experiences/<%= tag %>/filter"><%= tag %></a>
+                            <% }); %>
+                        <% }; %>
                     </div>
                 </div>
         </div>

@@ -11,7 +11,8 @@ router.get("/", function(req, res){
        if(err){
            console.log(err);
        } else {
-          res.render("experiences/index",{experiences:allExperiences});
+          var tags = [];
+          res.render("experiences/index",{experiences:allExperiences, tags:tags});
        }
     }).sort({
         type: 1,
@@ -24,12 +25,35 @@ router.get("/dining", function(req, res){
        if(err){
            console.log(err);
        } else {
-          res.render("experiences/index",{experiences:allExperiences});
+          //Get a list of all tags for the experiences
+          var tags = getTagsFromExperiences(allExperiences);
+          res.render("experiences/index",{experiences:allExperiences, tags:tags});
        }
     }).sort({
         type: 1,
         rank: 1});
 });
+
+router.get("/:tag/filter", function(req, res){
+    console.log("Looking for tag " + req.params.tag);
+    Experience.find({tags: req.params.tag}, function(err, allExperiences){
+        if(err){
+            console.log(err);
+        } else {
+           var tags = getTagsFromExperiences(allExperiences);
+           res.render("experiences/index",{experiences:allExperiences, tags:tags});
+        }
+     }).sort({
+         type: 1,
+         rank: 1});
+});
+
+getTagsFromExperiences = function(experiences){
+    console.log("Gettings tags from experiences");
+
+    var tags = ["beer", "lunch", "comfort"];
+    return tags;
+};
 
 router.get("/lunch", function(req, res){
     // Get all dining Experiences from DB

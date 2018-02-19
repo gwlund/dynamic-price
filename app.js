@@ -48,6 +48,7 @@ app.use(function(req, res, next){
 
 app.use("/", indexRoutes);
 app.use("/experiences", experienceRoutes);
+app.use("/experiences/:tag/filter", experienceRoutes);
 app.use("/experiences/:id/comments", commentRoutes);
 
 var port = process.env.PORT || 3000;
