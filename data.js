@@ -17,7 +17,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/J6dPFXu2VZ72"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -38,7 +38,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/arzfCPbjtcL2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://tripadvisor.com"
         }
     },
     {
@@ -59,7 +59,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/CLyEGEh7yoS2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -80,7 +80,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/5Zv7Q7SrfHN2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -101,7 +101,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/X8YEEsr6PDR2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -122,7 +122,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/yKr3Nuzm5tS2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -143,7 +143,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/YupGBBvdXN32"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -164,7 +164,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/1njbvwYZoMP2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -185,7 +185,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/fw42gtfJRVm"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -206,7 +206,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/S4ngwbcjbqq"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -227,7 +227,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/G8fqL9nG8Yr"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -248,7 +248,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/jwkLu1RAHzC2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     },
     {
@@ -268,7 +268,7 @@ var experienceData = [
             map_url: "https://goo.gl/maps/SPMLXRBgpaQ2"
         },
         external_links: {
-            url1: "http://test.com",
+            url1: "http://test.com"
         }
     }
 ];
