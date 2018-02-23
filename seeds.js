@@ -26,15 +26,16 @@ function seedDB(){
         if(err){
             console.log(err);
         }
-        console.log("removed Experiences!");
+        console.log("Removed All Previous Experiences!");
         data = require("./data")();
          //add a few Experiences
+         var count = 1;
         data.forEach(function(seed){
             Experience.create(seed, function(err, Experience){
                 if(err){
                     console.log(err)
                 } else {
-                    console.log("added a Experience");
+                    console.log("Added Experience " + count++);
                     //create a comment
                     // Comment.create(
                     //     {
@@ -53,7 +54,6 @@ function seedDB(){
             });
         });
     }); 
-    //add a few comments
 }
 
 module.exports = seedDB;
