@@ -50,3 +50,15 @@
     background-color: #c45027;
     border-color: #c45027;
 }
+
+.btn-tag {
+    width: 78px;
+    height: 25px;
+    line-height: 1;
+    border-radius: 5rem;
+}
+
+.row-tag {
+    margin-left: 5px;
+    margin-right: 5px;
+}

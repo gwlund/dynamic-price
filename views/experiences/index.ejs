@@ -10,14 +10,14 @@
                 <a class="btn btn-heliotrope btn-heliotrope btn-large" href="/experiences/new">Add New Experience</a>
              </p>
              <% } %>
-                <div class="row">
-                    <div class="col-sm-6 mb-4">
-                        <% if (tags) { %>
-                            <%  tags.forEach(function(tag) { %>
-                                <a class="btn btn-dark btn-sm" href="/experiences/<%= tag %>/filter"><%= tag %></a>
-                            <% }); %>
-                        <% }; %>
-                    </div>
+                <div class="row row-tag">
+                    <% if (tags) { %>
+                        <%  tags.forEach(function(tag) { %>
+                            <div class="col-lg-2 col-sm-3 col">
+                                <a class="btn btn-dark btn-sm btn-tag" href="/experiences/<%= tag %>/filter"><%= tag %></a>
+                            </div>
+                        <% }); %>
+                    <% }; %>
                 </div>
         </div>
     </header>
