@@ -35,6 +35,51 @@ router.get("/dining", function(req, res){
         rank: 1});
 });
 
+router.get("/nightlife", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'nightlife'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          //Get a list of all tags for the experiences
+          var tags = getTagsFromExperiences(allExperiences);
+          res.render("experiences/index",{experiences:allExperiences, tags:tags});
+       }
+    }).sort({
+        type: 1,
+        rank: 1});
+});
+
+router.get("/outdoors", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'outdoors'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+          //Get a list of all tags for the experiences
+          var tags = getTagsFromExperiences(allExperiences);
+          res.render("experiences/index",{experiences:allExperiences, tags:tags});
+       }
+    }).sort({
+        type: 1,
+        rank: 1});
+});
+
+router.get("/cultural", function(req, res){
+    // Get all dining Experiences from DB
+    Experience.find({type: 'cultural'}, function(err, allExperiences){
+       if(err){
+           console.log(err);
+       } else {
+            //Get a list of all tags for the experiences
+            var tags = getTagsFromExperiences(allExperiences);
+            res.render("experiences/index",{experiences:allExperiences, tags:tags});
+       }
+    }).sort({
+        type: 1,
+        rank: 1});
+});
+
 router.get("/:tag/filter", function(req, res){
     console.log("Looking for tag " + req.params.tag);
     Experience.find({tags: req.params.tag}, function(err, allExperiences){
@@ -67,109 +112,7 @@ getTagsFromExperiences = function(experiences){
     return tags;
 };
 
-router.get("/lunch", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({tags: 'lunch'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
 
-router.get("/dinner", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({tags: 'dinner'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
-
-router.get("/beer", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({tags: 'beer'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
-
-router.get("/italian", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({tags: 'italian'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
-
-router.get("/comfort", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({tags: 'comfort'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
-
-router.get("/nightlife", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({type: 'nightlife'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
-
-router.get("/outdoors", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({type: 'outdoors'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
-
-router.get("/cultural", function(req, res){
-    // Get all dining Experiences from DB
-    Experience.find({type: 'cultural'}, function(err, allExperiences){
-       if(err){
-           console.log(err);
-       } else {
-          res.render("experiences/index",{experiences:allExperiences});
-       }
-    }).sort({
-        type: 1,
-        rank: 1});
-});
 
 //CREATE - add new Experience to DB
 router.post("/", middleware.isLoggedIn, function(req, res){
