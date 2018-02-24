@@ -319,5 +319,28 @@
       "external_links": {
         "url1": "http://test.com"
       }
+    },
+    {
+      "name": "Galbraith Mountain 2",
+      "description": "Galbraith mountain is a world class mountain destination located within riding distance of downtown Bellingham. Over 50 miles of singletrack that winds through over 3000 acres overlooking the city and Bellingham Bay. The mountain is accessible to all non motorized use but all of the trails are built and maintained by the WMBC.",
+      "type": "outdoors",
+      "rank": 1,
+      "region": "padden",
+      "tags": [
+        "mountain biking",
+        "running"
+      ],
+      "website": "https://wmbcmtb.org/galbraith/",
+      "image": "https://cdn-files.apstatic.com/mtb/7015609_smallMed_1480637111.jpg",
+      "address": {
+        "address1": "1206 Birch St",
+        "city": "Bellingham",
+        "state": "WA",
+        "zip": "98225",
+        "map_url": "https://goo.gl/maps/SPMLXRBgpaQ2"
+      },
+      "external_links": {
+        "url1": "http://test.com"
+      }
     }
   ]
