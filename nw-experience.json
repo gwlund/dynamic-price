@@ -343,5 +343,28 @@
     "external_links": {
       "url1": "http://test.com"
     }
+  },
+  {
+    "name": "Cabin Tavern",
+    "description": "This place is awesome",
+    "type": "nightlife",
+    "rank": 1,
+    "region": "downtown",
+    "tags": [
+      "dive bar",
+      "beer"
+    ],
+    "website": "https://wmbcmtb.org/galbraith/https://www.facebook.com/cabintavernbellingham/",
+    "image": "https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/26991850_1806371286062744_7970366352868712806_n.jpg?oh=4bb1356af18f69b90b442b85795abdf5&oe=5B0D5F60",
+    "address": {
+      "address1": "07 W Holly St ",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "98225",
+      "map_url": "https://goo.gl/maps/SPMLXRBgpaQ2"
+    },
+    "external_links": {
+      "url1": "http://test.com"
+    }
   }
 ]
