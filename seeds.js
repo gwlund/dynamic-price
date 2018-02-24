@@ -2,6 +2,9 @@ var mongoose = require("mongoose");
 var Experience = require("./models/experience");
 var Comment   = require("./models/comment");
 
+var fs = require('fs');
+
+
 // var data = [
 //     {
 //         name: "Cloud's Rest", 
@@ -27,7 +30,8 @@ function seedDB(){
             console.log(err);
         }
         console.log("Removed All Previous Experiences!");
-        data = require("./data")();
+        //data = require("./data")();
+        var data = JSON.parse(fs.readFileSync('nw-experience.json', 'utf8'));
          //add a few Experiences
          var count = 1;
         data.forEach(function(seed){
@@ -50,7 +54,7 @@ function seedDB(){
                     //             console.log("Created new comment");
                     //         }
                     //     });
-                }
+                }   
             });
         });
     }); 
