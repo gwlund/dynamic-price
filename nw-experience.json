@@ -1,5 +1,29 @@
 [
   {
+    "name": "Camber Coffee",
+    "description": "Great place for breakfast and coffee.  Judged the best coffee in Washington state by http://www.foodandwine.com/",
+    "type": "dining",
+    "rank": 1,
+    "region": "downtown",
+    "tags": [
+      "coffee",
+      "breakfast"
+    ],
+    "website": "https://cambercoffee.com/",
+    "image": "",
+    "address": {
+      "address1": "221 W Holly Street",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "98225",
+      "phone": "360-656-5343",
+      "map_url": "https://goo.gl/maps/NeUjYqb7BoL2"
+    },
+    "external_links": {
+      "url1": "http://test.com"
+    }
+  },
+  {
     "name": "Rock & Rye Oyster House",
     "description": "The menu consistently reflects the passion of the chefs, creating new and interesting food while channeling inspiration from classics and modern cuisine, such as in-house cured meats.",
     "type": "dining",
