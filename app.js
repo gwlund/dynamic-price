@@ -15,6 +15,7 @@ var express     = require("express"),
 var commentRoutes    = require("./routes/comments"),
     experienceRoutes = require("./routes/experiences"),
     indexRoutes      = require("./routes/index");
+    developmentRoutes = require("./routes/development");
  
 var url = process.env.DATABASEURL || "mongodb://localhost/nucleus_experience_v3";
 console.log("Using mongo db " + url);
@@ -26,6 +27,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 seedDB(); //seed the database
+//Comment out to prevent reseed
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -51,9 +53,14 @@ app.use("/experiences", experienceRoutes);
 app.use("/experiences/:tag/filter", experienceRoutes);
 app.use("/experiences/:id/comments", commentRoutes);
 
+//used for testing random functionality
+app.use("/dev", developmentRoutes);
+
 var port = process.env.PORT || 3000;
 var ip = process.env.IP || "localhost";
 
-app.listen(process.env.PORT, process.env.IP, function(){
+//Working for Heroku setup.  TODO: Need to figure out why code above is not working
+//app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(port, ip, function(){
    console.log("The NucleusNW Experience Server Has Started " + ip + ":" + port);
 });
