@@ -60,7 +60,7 @@ var port = process.env.PORT || 3000;
 var ip = process.env.IP || "localhost";
 
 //Working for Heroku setup.  TODO: Need to figure out why code above is not working
-//app.listen(process.env.PORT, process.env.IP, function(){
-app.listen(port, ip, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
+//app.listen(port, ip, function(){
    console.log("The NucleusNW Experience Server Has Started " + ip + ":" + port);
 });
