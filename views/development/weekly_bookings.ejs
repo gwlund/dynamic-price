@@ -13,6 +13,18 @@
 
     <h1>Welcome to the Heliotrope Analysis Portal</h1>
 
+    <form action="https://secure.webrez.com/Bookings105/activity-edit.html" method="GET">
+        <input type="hidden" name="table" value="hotels">
+        <input type="hidden" name="listing_id" value="2337">
+        <input type="hidden" name="mode" value="command">
+        <input type="hidden" name="command" value="bookingreport">
+        <input type="hidden" name="adminmode" value="1">
+        <input type="hidden" name="hotel_id" value="2337">
+        <input type="text" name="date_from" placeholder="20180315">
+        <input type="text" name="date_to" placeholder="20180322">
+        <button>Generate Report</button>
+    </form>
+
     </body>
 
 </html>
