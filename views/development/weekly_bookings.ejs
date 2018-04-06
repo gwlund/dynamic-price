@@ -11,24 +11,28 @@
 
     <body style="background-color:white;">
 
-    <h1>Welcome to the Heliotrope Analysis Portal</h1>
+    <div class="container">
+        <div class="row">
+            <h1>Welcome to the Heliotrope Analysis Portal</h1>
+            <div style="width: 30%; margin: 25px auto;">
+                <button type="button" onclick="myFunction()">Login to WRP</button>
 
-    <button type="button" onclick="myFunction()">Redirect to Google</button>
-
-    <form action="https://secure.webrez.com/Bookings105/activity-edit.html" method="GET">
-        <input type="hidden" name="table" value="hotels">
-        <input type="hidden" name="listing_id" value="2337">
-        <input type="hidden" name="mode" value="command">
-        <input type="hidden" name="command" value="bookingreport">
-        <input type="hidden" name="adminmode" value="1">
-        <input type="hidden" name="hotel_id" value="2337">
-        Start Date (Format YYYYMMDD):<br>
-        <input type="text" name="date_from" placeholder="20180315"> <br>
-        End Date (Format YYYYMMDD) Not inclusive:<br>
-        <input type="text" name="date_to" placeholder="20180322"> <br>
-        <button>Generate Report</button>
-    </form>
-
+                <form action="https://secure.webrez.com/Bookings105/activity-edit.html" method="GET">
+                    <input type="hidden" name="table" value="hotels">
+                    <input type="hidden" name="listing_id" value="2337">
+                    <input type="hidden" name="mode" value="command">
+                    <input type="hidden" name="command" value="bookingreport">
+                    <input type="hidden" name="adminmode" value="1">
+                    <input type="hidden" name="hotel_id" value="2337">
+                    Start Date (Format YYYYMMDD):<br>
+                    <input type="text" name="date_from" placeholder="20180315"> <br>
+                    End Date (Format YYYYMMDD) Not inclusive:<br>
+                    <input type="text" name="date_to" placeholder="20180322"> <br><br>
+                    <button>Generate Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </body>
 
 </html>
