@@ -9,9 +9,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
+    <body style="background-color:white;">
 
     <h1>Welcome to the Heliotrope Analysis Portal</h1>
+
+    <button type="button" onclick="myFunction()">Redirect to Google</button>
 
     <form action="https://secure.webrez.com/Bookings105/activity-edit.html" method="GET">
         <input type="hidden" name="table" value="hotels">
@@ -22,7 +24,7 @@
         <input type="hidden" name="hotel_id" value="2337">
         Start Date (Format YYYYMMDD):<br>
         <input type="text" name="date_from" placeholder="20180315"> <br>
-        End Date (Format YYYYMMDD):<br>
+        End Date (Format YYYYMMDD) Not inclusive:<br>
         <input type="text" name="date_to" placeholder="20180322"> <br>
         <button>Generate Report</button>
     </form>
@@ -30,3 +32,10 @@
     </body>
 
 </html>
+
+<script>
+    function myFunction() {
+         window.top.location.href = "http://www.google.com";
+     
+    }
+</script>
