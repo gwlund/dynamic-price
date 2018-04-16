@@ -1,5 +1,30 @@
 [
   {
+    "name": "Melvin Brewing",
+    "description": "TBD",
+    "type": "dining",
+    "rank": 1,
+    "region": "downtown",
+    "tags": [
+      "beer",
+      "fusion",
+      "walking"
+    ],
+    "website": "",
+    "image": "",
+    "address": {
+      "address1": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "",
+      "phone": "",
+      "map_url": ""
+    },
+    "external_links": {
+      "url1": "http://test.com"
+    }
+  },
+  {
     "name": "Camber Coffee",
     "description": "Great place for breakfast and coffee.  Judged the best coffee in Washington state by http://www.foodandwine.com/",
     "type": "dining",
